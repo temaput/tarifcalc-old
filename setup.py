@@ -1,9 +1,13 @@
 #!/usr/bin/env python
-from distutils.core import setup
+from setuptools import setup
 
 
-setup(name='postcalc',
+setup(name='tarifcalc',
         version='0.1',
+        py_modules=['tarifcalc'],
+        setup_requires=['httplib2'],
+        include_package_data=False,
+        # package_data={'drawinvoice': ['fonts/*.ttf']},
         url='https://github.com/temaput/postcalc',
         author="Artem Putilov",
         author_email="putilkin@gmail.com",
@@ -11,9 +15,6 @@ setup(name='postcalc',
         long_description=open('README.md').read(),
         keywords="Russianpost, delivery, tarifs",
         license='BSD',
-        py_modules=['tarifcalc'],
-        # package_data={'drawinvoice': ['fonts/*.ttf']},
-        requires=['httplib2'],
         # See http://pypi.python.org/pypi?%3Aaction=list_classifiers
         classifiers=['Environment :: Commercial',
             'Intended Audience :: Developers',
